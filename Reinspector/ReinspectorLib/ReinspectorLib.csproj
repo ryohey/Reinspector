@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNET40|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Unity\Assets\Plugins\x86_64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNET35|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Unity\Assets\Plugins\x86_64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNET35|x64'">
+    <OutputPath>..\..\Unity\Assets\Plugins\x86_64\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNET35|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\Unity\Assets\Plugins\x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNET35|x86'">
+    <OutputPath>..\..\Unity\Assets\Plugins\x86\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <ProjectGuid>{9C04B997-BF62-4BBC-A1BF-232474526F4B}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\Libs\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\Libs\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Source\Extensions\TransformExtensions.cs" />
+    <Compile Include="Source\Internal\DebugComponent.cs" />
+    <Compile Include="Source\Internal\Identifier.cs" />
+    <Compile Include="Source\Internal\RestorePostProcess.cs" />
+    <Compile Include="Source\Extensions\TextureExtensions.cs" />
+    <Compile Include="Source\Library\meshserializer.cs" />
+    <Compile Include="Source\Message\EventDispatcher.cs" />
+    <Compile Include="Source\Message\HttpMessageClient\CoroutineHandler.cs" />
+    <Compile Include="Source\Message\HttpMessageClient\CoroutineHandlerExtension.cs" />
+    <Compile Include="Source\Message\HttpMessageClient\HttpMessageClient.cs" />
+    <Compile Include="Source\Message\HttpMessageServer\HttpMessageServer.cs" />
+    <Compile Include="Source\Message\HttpMessageServer\StreamExtensions.cs" />
+    <Compile Include="Source\Message\IMessageBroker.cs" />
+    <Compile Include="Source\Message\Messages.cs" />
+    <Compile Include="Source\Message\MessageUnion.cs" />
+    <Compile Include="Source\SceneSerializer.cs" />
+    <Compile Include="Source\Serializable\FontSerializable.cs" />
+    <Compile Include="Source\Serializable\ObjectSerializable.cs" />
+    <Compile Include="Source\Serializable\Reference\ComponentReference.cs" />
+    <Compile Include="Source\Serializable\Reference\ComponentReferenceImpl.cs" />
+    <Compile Include="Source\Serializable\Reference\TransformReferenceList.cs" />
+    <Compile Include="Source\Serializable\SceneSerializable.cs" />
+    <Compile Include="Source\Serializable\Union\ComponentUnion.cs" />
+    <Compile Include="Source\Serializable\Union\TextureUnion.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\AudioListenerSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\CameraSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\CanvasSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\Collider\BoxColliderSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\Collider\ColliderSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\ComponentSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\LightSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\MeshFilterSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\Renderer\MeshRendererSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\Renderer\RendererSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\Renderer\SkinnedMeshRendererSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\TransformSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\CanvasRendererSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\Graphic\GraphicSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\Graphic\MaskableGraphicSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\MeshEffect\BaseMeshEffectSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\Raycaster\BaseRaycasterSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\CanvasScalerSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\Raycaster\GraphicRaycasterSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\MeshEffect\OutlineSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\MeshEffect\ShadowSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\Graphic\TextSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Component\UI\UIBehaviourSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\GameObjectSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\MaterialSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\MeshSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\PhysicMaterialSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\ShaderSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Texture\Texture2DSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\Texture\TextureSerializable.cs" />
+    <Compile Include="Source\Serializable\UnityObject\UnityObjectSerializable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Serializer\Deserializer.cs" />
+    <Compile Include="Source\Serializer\Serializer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
