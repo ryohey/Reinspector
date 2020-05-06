@@ -9,7 +9,7 @@ It is not intended for unauthorized modification or data extraction.
 
 Reinspector consists of two components.
 
-- Reinspector Plugin - Inject to the target application with ![BepInEx](https://github.com/BepInEx/BepInEx/)
+- Reinspector Plugin - Inject to the target application with [BepInEx](https://github.com/BepInEx/BepInEx/)
 - Reinspector Editor Extension - Communicate with the target application via Reinspector plugin
 
 The Plugin serializes whole scenes into binaries. And the Editor Extension deserialize it on Unity Editor.
