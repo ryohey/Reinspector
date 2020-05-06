@@ -5,6 +5,15 @@ Inspect an application made with Unity on Unity Editor.
 This system is intended to explore and learn the architecture of Unity applications. 
 It is not intended for unauthorized modification or data extraction.
 
+## Usage
+
+1. Install BepInExp to the target application
+2. Copy ReinspectorPlugin.dll and ReinspectorLib.dll to plugins directory
+3. Open the Unity project placed on `/Unity/Assets/Scenes/Main.unity`
+4. Open Reinspector Editor Extension from toolbar `Reinspector > Server`
+5. Click `Save All Scenes`
+6. Open the saved scene file from toolbar `Reinspector > Open Scene`
+
 ## How it works
 
 Reinspector consists of two components.
